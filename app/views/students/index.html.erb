@@ -7,5 +7,17 @@
       <th> Class </th>
     </tr>
   </thead>>
-  
+  <tbody>
+    <% @students.each do |student| %>
+    <tr>
+      <td><%= student.id %></td>
+      <td><%= student.name %></td>
+      <td><%= student.class_university %></td>
+      <td><%= link_to "Show", product %></td>
+      <td><%= link_to "Edit", edit_student_path(student) %></td>
+      <td><%= link_to "Destroy", product, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
+<%= link_to "New student", new_student_path %>

@@ -4,6 +4,9 @@ class StudentsController < ActionController::Base
     @students = Student.all
   end
 
+  def show 
+  end  
+
   def student_params
   params.require(:student).permit(:name, :class_university, :score, :learning_power)   
   end
